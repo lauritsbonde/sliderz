@@ -15,7 +15,8 @@ Sliderz is a ChatGPT wrapper, where you can upload a file and it generates the s
 This is a learning project for me. I am trying to learn new technologies to see if they are useful. The main focuses of the project is:
 
 -   Learning go, for the backend
--   Learning SolidJS, for the frontend
+-   ~~Learning SolidJS, for the frontend~~ I tried, but solid seems confusing with typescript!
+-   Learning Svelte, for the frontend
 
 Thas pretty much it :)
 
@@ -30,15 +31,18 @@ cd backend && go run .
 Run the frontend:
 
 ```bash
-cd frontend && pnpm dev
+cd frontend && npm i && npm run dev
 ```
 
 ## Where are we now?
 
 -   [x] Frontend setup
 -   [x] Backend setup
+-   [ ] Simple frontend
+-   [ ] Simple backend
 -   [ ] File upload
 -   [ ] Parse the file
--   [ ] Generate slides from parsed sections
--   [ ] Generate notes from parsed sections
+-   [ ] Generate slides from parsed sections, using ChatGPT
+-   [ ] Generate notes from parsed sections, using ChatGPT
 -   [ ] Return the slides and notes
+-   [ ] Make a nice frontend

@@ -32,3 +32,13 @@ Run the frontend:
 ```bash
 cd frontend && pnpm dev
 ```
+
+## Where are we now?
+
+-   [x] Frontend setup
+-   [x] Backend setup
+-   [ ] File upload
+-   [ ] Parse the file
+-   [ ] Generate slides from parsed sections
+-   [ ] Generate notes from parsed sections
+-   [ ] Return the slides and notes

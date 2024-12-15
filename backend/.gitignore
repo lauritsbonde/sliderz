@@ -25,3 +25,6 @@ out
 
 # Go workspace file
 go.work
+
+temp-files/
+tmp/

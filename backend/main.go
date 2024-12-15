@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
+	filehandler "backend/handlers"
+
 	"github.com/gorilla/mux"
 )
 
@@ -16,9 +18,8 @@ func middleWare(next http.Handler) http.Handler {
 
 func main(){
 	r := mux.NewRouter()
-	r.HandleFunc("/", index).Methods("GET")
-	r.HandleFunc("/hello", hello).Methods("GET")
-	r.HandleFunc("/headers", headers).Methods("GET")
+
+	r.HandleFunc("/upload", filehandler.FileUpload).Methods("POST")
 
 	srv := &http.Server{
 		Addr:    ":8090",

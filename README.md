@@ -26,6 +26,8 @@ Run the backend:
 
 ```bash
 cd backend && go run .
+// Or live reload
+cd backend && air
 ```
 
 Run the frontend:

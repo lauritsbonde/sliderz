@@ -10,13 +10,13 @@ import (
 )
 
 func middleWare(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request){
+	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		fmt.Println("Executing middleware before request phase!")
 		next.ServeHTTP(w, req)
 	})
 }
 
-func main(){
+func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/upload", filehandler.FileUpload).Methods("POST")
@@ -25,11 +25,10 @@ func main(){
 		Addr:    ":8090",
 		Handler: middleWare(r),
 	}
-	
 
 	fmt.Println("Server is running on port 8090")
 	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			fmt.Printf("Server error: %v\n", err)
+		fmt.Printf("Server error: %v\n", err)
 	}
 
 	// Start the server in a goroutine
